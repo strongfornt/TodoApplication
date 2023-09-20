@@ -1,5 +1,8 @@
+
+import ProviderText from '@/components/ProviderText'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Cursor from '@/components/Cursor'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +14,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      
+        
+       <ProviderText>  <Cursor/>
+       {children}
+       </ProviderText>
+        
+        </body>
     </html>
   )
 }
