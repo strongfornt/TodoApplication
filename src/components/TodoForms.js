@@ -73,12 +73,12 @@ const TodoForms = () => {
         </div>
         <div className="flex items-center justify-center w-24 mx-auto">
         {
-          todosValue.length >0 &&
-          todosValue.map((item) =>(  <button onClick={() =>dispatch(removeTodo(item.id))}
+          todosValue.length >1 &&
+          (  <button onClick={() =>dispatch(removeTodo())}
           className="flex-1 bg-[#0d3837] hover:bg-red-600 rounded duration-700">
            Remove all
          </button>
-         )) }
+         ) }
        
         </div>
       
